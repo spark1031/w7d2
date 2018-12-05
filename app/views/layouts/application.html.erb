@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TodoApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    
+    <style media="screen">
+      body {
+        color: red;
+        font-family: 'Roboto', sans-serif;
+        background: pink;
+        animation: grad 15s infinite;
+      }
+      
+      @keyframes grad {
+        0% {
+          background-color: #CD5C5C;
+          color: pink;
+        }
+        20% {
+          background-color: pink;
+          color: white;
+        }
+        100% {
+          background-color: #CD5C5C;
+          color: pink;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <%= yield %>
+
+  </body>
+</html>
